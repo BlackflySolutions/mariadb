@@ -2,13 +2,17 @@
 [mysqldump]
 max_allowed_packet = 1G
 [client]
-default-character-set = utf8
+default-character-set = utf8mb4
+[mysql]
+default-character-set = utf8mb4
 [mysqld]
 log-warnings
-collation-server                        = utf8_unicode_ci
-init_connect                            = "SET collation_connection = utf8_general_ci"
-character-set-server                    = utf8
-character_set_filesystem                = utf8
+collation_server                        = utf8mb4_bin
+init-connect                            = "SET NAMES utf8mb4"
+init_connect                            = "SET collation_connection = utf8mb4_bin"
+character_set_server                    = utf8mb4
+character_set_client                    = utf8mb4
+character_set_filesystem                = utf8mb4
 skip-character-set-client-handshake
 skip-name-resolve
 back_log = 100
