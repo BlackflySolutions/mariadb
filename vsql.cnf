@@ -11,7 +11,7 @@ collation_server                        = utf8mb4_bin
 character_set_server                    = utf8mb4
 skip-name-resolve
 back_log = 100
-max_allowed_packet = 16M
+max_allowed_packet = 64M
 innodb_file_per_table                   = 1
 #innodb_file_format                      = barracuda
 innodb_large_prefix                     = true
@@ -19,6 +19,7 @@ innodb_flush_method                     = O_DIRECT
 innodb_flush_log_at_trx_commit          = 2
 long_query_time = 10
 sql-mode				= NO_ENGINE_SUBSTITUTION,NO_AUTO_CREATE_USER
+in_predicate_conversion_threshold       = 64000
 # skip-grant-tables
 # as of 19.03, we'll use the following, but let's keep it safe for now.
 #   sysctls:
