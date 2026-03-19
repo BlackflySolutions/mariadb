@@ -1,2 +1,2 @@
-FROM mariadb:10.5
+FROM mariadb:10.6
 COPY vsql.cnf /etc/mysql/conf.d
