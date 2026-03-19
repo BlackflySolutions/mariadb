@@ -1,4 +1,4 @@
-# Overrides to mariadb version 10.3
+# Overrides to mariadb version 10.6
 [mysqldump]
 max_allowed_packet = 1G
 [client]
@@ -6,6 +6,7 @@ default-character-set = utf8mb4
 [mysql]
 default-character-set = utf8mb4
 [mysqld]
+transaction_isolation                   = READ-COMMITTED
 log-warnings
 collation_server                        = utf8mb4_bin
 character_set_server                    = utf8mb4
